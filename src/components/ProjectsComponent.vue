@@ -80,7 +80,7 @@ import { useProjectsStore } from '@/stores/projects';
 const projectsStore = useProjectsStore();
 const allProjects = computed(() => projectsStore.allProjects);
 
-const visibleProjects = ref(allProjects.value.slice(0, 4));
+const visibleProjects = ref(allProjects.value.slice(0, 6));
 const selectedProject = ref(null);
 const selectedTag = ref('');
 const availableTags = computed(() => {
@@ -117,7 +117,7 @@ const closeProjectDetails = () => {
 
 const handleFilter = () => {
   if (selectedTag.value === "") {
-    visibleProjects.value = allProjects.value.slice(0, 4);
+    visibleProjects.value = allProjects.value.slice(0, 6);
     totalVisibleProjects.value = allProjects.value.length;
   } else {
     const filteredProjects = allProjects.value.filter(project => project.tag.includes(selectedTag.value));

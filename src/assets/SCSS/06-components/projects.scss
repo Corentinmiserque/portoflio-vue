@@ -111,44 +111,51 @@
         display: flex;
         align-items: center;
 
+        
+
         .test{
             display: flex;
             flex-direction: column;
             align-items: center;
             height: fit-content;
+            position: relative;
+            justify-content: center;
+            width: 95%;
             @include mq(min, $bkp-tablet) {
                 flex-direction: row;
                 margin: 0 20px;
+                gap: 20px;
+                width: 100%;
+
 
             }
 
         }
    picture{
-
-width: 95%;
+width: 100%;
 @include aspect-ratio(1,1);
 @include img-object-fit;
 @include mq(min, $bkp-tablet) {
-    width: 50%;
+    width: 49%;
 }
     img{
         width: 100%;
+        margin: 0;
+        padding: 0%;
     }
    }
+
    &__container{
-    padding: 2.5%;
 width: 100%;
-background-color: red;
-    position: relative;
+overflow: hidden;
     @include mq(min, $bkp-tablet) {
-        background-color: green;
-        width: 50%;
+        width: 49%;
         height: 100%;
     }
     .close-button{
         position: absolute;
         display: flex;
-        top: 5%;
+        top: 0;
         right: 0;
         flex-direction: column;
         :nth-child(1){
@@ -170,14 +177,11 @@ background-color: red;
    &__title {
     z-index: 100;
     font-family: $font-secondary;
-    font-size: 75px;
+    font-size: clamp(35px , 5vw, 70px);
 }
 &__text{
     font-size: clamp(15px , 2vw, 30px);
     text-align: justify;
-    background-color: aqua;
-    
-
 }
 &__tags{
     display: flex;
@@ -188,24 +192,51 @@ background-color: red;
     gap: 30px;
 }
 &__links{
+
+    --marquee-width: 100vw;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	--item-font-size: 5vw;
+
     display: flex;
     flex-direction: row;
     border-bottom: 0.5px solid;
     border-top: 0.5px solid;
+    width: fit-content;
+	display: flex;
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 25s linear infinite;
+	animation-play-state: paused;
+	opacity: 0;
+	transition: opacity 0.1s;
+    animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
     &__link{
+        text-align: center;
+        white-space: nowrap;
         display: flex;
         align-items: center;
         font-family: $font-accent;
         color: $color-black;
         text-decoration: none;
-        font-size: 55px;
+        font-size: clamp(35px , 4vw, 55px);
         margin-right: 40px;
         .dot{
             margin-left: 40px;
         }
     }
 
-
+    @keyframes marquee {
+        0% {
+            transform: translate3d(var(--move-initial), 0, 0);
+        }
+    
+        100% {
+            transform: translate3d(var(--move-final), 0, 0);
+        }
+    }
 }
 
     }

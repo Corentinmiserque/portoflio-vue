@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div v-if="selectedProject" class="project__details">
+    <section v-if="selectedProject" class="project__details">
       <div class="test">
 
       <picture>
@@ -41,11 +41,15 @@
       <div class="project__details__links">
         <a :href="selectedProject.github" class="project__details__links__link">GITHUB  <span class="dot"></span></a>
       <a :href="selectedProject.url" class="project__details__links__link">VISIT SITE   <span class="dot"></span></a>
+      <a :href="selectedProject.github" class="project__details__links__link">GITHUB  <span class="dot"></span></a>
+      <a :href="selectedProject.url" class="project__details__links__link">VISIT SITE   <span class="dot"></span></a>
+      <a :href="selectedProject.github" class="project__details__links__link">GITHUB  <span class="dot"></span></a>
+      <a :href="selectedProject.url" class="project__details__links__link">VISIT SITE   <span class="dot"></span></a>
 
       </div>
     </div>
     </div>
-    </div>
+    </section>
 
     <button v-show="showLoadMoreButton" @click="loadMoreProjects" class="load-more-button">Load more projects <svg width="56" height="32" viewBox="0 0 56 32"  xmlns="http://www.w3.org/2000/svg">
 <path d="M54.8889 17.4427C55.4343 17.3505 55.8014 16.835 55.7089 16.2913C55.6165 15.7476 55.0995 15.3816 54.5541 15.4738L54.8889 17.4427ZM40.578 31.8496L41.3375 29.3488L39.4204 28.7701L38.6609 31.2709L40.578 31.8496ZM41.3375 29.3488C43.2236 23.1386 48.4721 18.5272 54.8889 17.4427L54.5541 15.4738C47.3881 16.685 41.5267 21.8348 39.4204 28.7701L41.3375 29.3488Z" />

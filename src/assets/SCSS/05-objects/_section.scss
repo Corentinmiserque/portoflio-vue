@@ -4,10 +4,11 @@
 
 section, footer,  main, header {
   padding: 25px 0;
-  @include wrap(1660px,20px);
+  @include wrap(1660px,10px);
 
   @include mq(min, $bkp-tablet) {
     padding: 50px 0;
+    @include wrap(1660px,20px);
   }
 
   &.has-contrast {

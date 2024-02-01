@@ -10,7 +10,7 @@ export const useProjectsStore = defineStore({
         title: 'Courir',
         text: 'work in progress.',
         tag: ['Pwa', 'Vue', 'Bulma', 'Offline' , 'Solo'], 
-        picture: { url: "/public/Courir.png", alt: 'Courir' },
+        picture: { url: "./public/Courir.png", alt: 'Courir' },
         github: 'https://github.com/Corentinmiserque/courir',
         url: 'https://courir.netlify.app/homepage',
       },

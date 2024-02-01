@@ -14,9 +14,7 @@
       <div v-for="project in visibleProjects" :key="project.title" class="project__card" @click="showProjectDetails(project)">
         <h3 class="project__card__title card-title">{{ project.title }}</h3>
         <img :src="project.picture.url" :alt="project.picture.alt" class="project__card__image" />
-        <div class="project__card__tags">
-          <span v-for="tag in project.tag" :key="tag" class="project__card__tag">{{ tag }}</span>
-        </div>
+
       </div>
     </div>
 

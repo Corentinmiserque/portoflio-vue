@@ -1,0 +1,66 @@
+
+//SETTINGS
+@import "./01-settings/animation";
+@import "./01-settings/breakpoint";
+@import "./01-settings/colors";
+@import "./01-settings/global";
+
+//TOOLS
+
+@import "./02-tools/animations";
+@import "./02-tools/aspect-ratio";
+@import "./02-tools/image-object-fit";
+@import "./02-tools/line-clamp";
+@import "./02-tools/link-hover-anim";
+@import "./02-tools/list-unstyled";
+@import "./02-tools/on-event";
+@import "./02-tools/overlay";
+@import "./02-tools/placeholder";
+@import "./02-tools/position";
+@import "./02-tools/rem";
+@import "./02-tools/reset-button-style";
+@import "./02-tools/size";
+@import "./02-tools/sr-only";
+@import "./02-tools/wrapper";
+
+//GENERICS
+
+@import "./03-generic/font-face";
+@import "./03-generic/normalize";
+@import "./03-generic/reset";
+
+//ELEMENTS
+
+@import "./04-elements/all";
+@import "./04-elements/body";
+@import "./04-elements/headings";
+@import "./04-elements/html";
+@import "./04-elements/links";
+@import "./04-elements/media";
+@import "./04-elements/lists";
+@import "./04-elements/paragraphs";
+@import "./04-elements/tables";
+
+// OBJECTS
+
+@import "./05-objects/forms-field";
+@import "./05-objects/grid";
+@import "./05-objects/icons";
+@import "./05-objects/lazyload";
+@import "./05-objects/scroll-animations";
+@import "./05-objects/section";
+@import "./05-objects/segment";
+@import "./05-objects/select";
+
+//COMPONENTS
+
+@import "./06-components/header.scss";
+@import "./06-components/hero.scss";
+@import "./06-components/projects.scss";
+@import "./06-components/footer.scss";
+
+@import "./06-components/ui/text";
+@import "./06-components/ui/title"
+
+
+

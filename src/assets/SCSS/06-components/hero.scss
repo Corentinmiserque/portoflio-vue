@@ -1,0 +1,34 @@
+.hero{
+    display: flex;
+    justify-content: center;
+    @include mq(min, $bkp-tablet) {
+        margin-bottom: 150px;
+}
+    .container{
+        @include mq(min, $bkp-tablet) {
+            margin: 100px 0;
+    }
+    }
+.subtitle-big{
+    font-size: clamp(40px, 11vw ,130px);
+    margin: 0;
+}
+.title-big{
+    font-size: clamp(55px, 17vw ,220px);
+    margin: 0;
+    margin-left: 10%;
+    position: relative;
+    width: fit-content;
+    font-family: $font-ternary;
+    display: flex;
+    align-items: center;
+    .dot{
+    @include size(0.18lh);
+    }
+}
+
+
+
+
+}
+

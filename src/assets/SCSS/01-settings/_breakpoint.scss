@@ -1,0 +1,19 @@
+@import "../node_modules/mq-scss/mq";
+
+$bkp-mobile: 480px;
+$bkp-phablet: 640px;
+$bkp-tablet: 768px;
+$bkp-desktop: 980px;
+$bkp-wide: 1380px;
+$bkp-hd: 1920px;
+
+$breakpoints: (
+  mobile: $bkp-mobile,
+  phablet: $bkp-phablet,
+  tablet: $bkp-tablet,
+  desktop: $bkp-desktop,
+  wide: $bkp-wide,
+  hd: $bkp-hd
+);
+
+$mq-breakpoints: $breakpoints;

@@ -1,0 +1,78 @@
+/**
+ * Body
+ */
+
+body {
+
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-family:"Montreal";
+  
+
+
+
+  &.is-modal-open {
+    overflow: hidden;
+  }
+
+  &.menu-open {
+    overflow: hidden;
+  }
+
+
+
+
+  .lightmode {
+    color: $color-black;
+    transition: all .2s $ease-out-quad;
+    border-color: $color-border-dark;
+    position: relative;
+  
+    svg {
+      fill: $color-black;
+      transition: all .3s $ease-out-quad;
+    }
+    button{
+      color: $color-black;
+    }
+
+    select{
+      color: $color-black;
+    }
+  }
+  
+
+
+
+  .darkmode {
+    transition: all .2s $ease-out-quad;
+    background-color: $color-black;
+    color: $color-white;
+    border-color: $color-border-light;
+  
+
+  
+    .header__nightmode__container {
+      &::before {
+        top: 33px;
+        transition: all .5s $ease-out-quad;
+      }
+    }
+  
+    svg {
+      fill: $color-white;
+      transition: all .3s $ease-out-quad;
+    }
+
+    button{
+      color: $color-white;
+    }
+    select{
+      color: $color-white;
+    }
+  }
+  
+}

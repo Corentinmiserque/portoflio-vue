@@ -1,0 +1,84 @@
+<template>
+  <section class="header">
+    <div class="header__logo">
+      <svg width="90" height="82" viewBox="0 0 90 82"  xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M87.0801 4.76041C86.7334 1.8537 85.5334 0.400391 83.4801 0.400391C82.6534 0.400391 81.9068 0.653687 81.2401 1.1604C78.9201 3.37369 77.7601 5.24039 77.7601 6.76041C77.7601 7.56039 78.2534 8.05371 79.2401 8.24039C79.9868 7.92041 80.3601 7.50711 80.3601 7.0004L80.2401 6.52039C81.2001 4.0137 82.2001 2.76041 83.2401 2.76041H83.7601C84.3201 3.05371 84.6001 3.4671 84.6001 4.0004V5.24039C84.6001 6.20041 84.0934 8.04041 83.0801 10.7604C80.0668 16.3871 78.0401 20.3871 77.0001 22.7604C77.2934 23.5337 77.6534 23.9204 78.0801 23.9204C85.4134 21.9471 89.0801 20.2804 89.0801 18.9204C88.7868 18.1471 88.3734 17.7604 87.8401 17.7604H87.7601C84.1868 19.6804 81.8534 20.6404 80.7601 20.6404V20.4004C84.9734 12.6671 87.0801 7.4537 87.0801 4.76041ZM56.8501 14.6004H9.1501V24.1404H56.8484C56.8413 27.3707 56.8043 30.8803 56.611 34.7444L6.5401 36.2904L8.1601 46.4604L55.8842 43.8419C55.328 48.8609 54.4515 54.4071 53.0701 60.5904L64.8601 61.8504C68.6444 44.1608 68.6421 32.4954 68.6402 22.5623L68.6401 21.8904V14.6004H61.6201H56.8501ZM27.3301 71.8404H0.600098V81.4704H75.9301V71.8404H39.3001V51.8604H27.3301V71.8404Z"/>
+</svg>
+
+    </div>
+
+    <div class="header__content">
+      <h1 class="header__title">Miserque Corentin</h1>
+      <h2 class="header__subtitle">Junior Front-end Developer</h2>
+    </div>
+
+    <div class="header__outils">
+      <div class="header__nightmode" @click="toggleNightMode" :class="{ 'lightmode': props.isLightMode, 'darkmode': !props.isLightMode }">
+        <div class="header__nightmode__container"></div>
+        <div class="header__nightmode__text">
+          <p>N</p>
+          <p>FF</p>
+        </div>
+      </div>
+
+      <!-- <div class="header__menu" @click="toggleMenu">
+        <span class="header__menu__line"></span>
+        <span class="header__menu__line"></span>
+        <span class="header__menu__line"></span>
+      </div> -->
+
+      <div v-if="isMenuOpen" class="header__nav">
+        <nav>
+          <a href="" @mouseover="handleMouseOver('HOME')" @mouseleave="handleMouseLeave">HOME</a>
+          <a href="" @mouseover="handleMouseOver('ABOUT')" @mouseleave="handleMouseLeave">ABOUT</a>
+          <a href="" @mouseover="handleMouseOver('PROJECTS')" @mouseleave="handleMouseLeave">PROJECTS</a>
+          <a href="" @mouseover="handleMouseOver('CONTACT')" @mouseleave="handleMouseLeave">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+    <div class="divbackgroundcolor" :class="{ 'menu-open': isMenuOpen }"></div>
+  </section>
+</template>
+
+<script setup>
+import { ref, watchEffect } from 'vue';
+
+const props = defineProps(['isLightMode']);
+const emits = defineEmits();
+
+const isMenuOpen = ref(false);
+
+const toggleNightMode = () => {
+  emits('toggle-night-mode');
+};
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const handleMouseOver = (link) => {
+  const links = document.querySelectorAll('.header__nav a');
+  links.forEach((a) => {
+    if (a.textContent === link) {
+      a.style.fontSize = '1.5em'; // Ajustez la taille comme vous le souhaitez
+    } else {
+      a.style.fontSize = '1em'; // Taille par défaut pour les autres liens
+    }
+  });
+};
+
+const handleMouseLeave = () => {
+  const links = document.querySelectorAll('.header__nav a');
+  links.forEach((a) => {
+    a.style.fontSize = '1em'; // Réinitialiser la taille à la valeur par défaut
+  });
+};
+
+watchEffect(() => {
+  if (isMenuOpen.value) {
+    document.body.classList.add('menu-open');
+  } else {
+    document.body.classList.remove('menu-open');
+  }
+})
+</script>

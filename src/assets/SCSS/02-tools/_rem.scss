@@ -1,0 +1,12 @@
+/**
+ * https://github.com/nicholasruggeri/px-to-rem-sass-mixin
+ * Usage
+   font-size: rem(20)
+   margin: rem(40) rem(40);
+ */
+@use 'sass:math';
+
+@function rem($pxval) {
+  $base: 16px;
+  @return math.div($pxval, $base) * 1rem;
+}

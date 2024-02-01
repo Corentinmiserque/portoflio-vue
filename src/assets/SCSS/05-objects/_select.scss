@@ -1,0 +1,36 @@
+/*
+ * https://css-tricks.com/styling-a-select-like-its-2019/
+ */
+
+ .select-css {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 14px 35px 14px 20px;
+  background-color: $color-white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath fill='%231E3B8B' d='M119.5 326.9L3.5 209.1c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L128 287.3l100.4-102.2c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L136.5 327c-4.7 4.6-12.3 4.6-17-.1z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%, 0 0;
+  background-size: 13px;
+  border: 1px solid $color-black;
+  border-radius: 90px;
+  color: $color-black;
+  line-height: 1;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  .error & {
+    color: $color-danger; 
+  }
+
+}
+
+.select-css::-ms-expand {
+  display: none;
+}

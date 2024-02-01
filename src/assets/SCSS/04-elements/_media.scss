@@ -1,0 +1,42 @@
+/**
+ * Media
+ */
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+
+  &.object-fit-contain {
+    object-fit: contain !important;
+  }
+
+  &.object-fit-cover {
+    object-fit: cover !important;
+  }
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+figure {
+  margin: 0;
+  img {
+    display: block;
+  }
+}
+
+object,
+iframe,
+embed,
+canvas,
+video,
+audio {
+  max-width: 100%;
+}
+
+iframe {
+  border: none;
+}

@@ -1,0 +1,16 @@
+.title{
+    font-size: clamp(40px, 7vw, 120px);
+    font-family: $font-secondary;
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.dot{
+    background-color: $color-green;
+@include size(0.20lh);
+    border-radius: 100px;
+}

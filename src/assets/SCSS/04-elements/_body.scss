@@ -42,6 +42,10 @@ body {
     select{
       color: $color-black;
     }
+
+    .project__details{
+      background-color: rgba($color-white, 0.95);
+    }
   }
   
 
@@ -57,8 +61,11 @@ body {
   
     .header__nightmode__container {
       &::before {
-        top: 33px;
+        top: 16px;
         transition: all .5s $ease-out-quad;
+        @include mq(min, $bkp-tablet) {
+          top: 33px;
+        }
       }
     }
   
@@ -72,6 +79,9 @@ body {
     }
     select{
       color: $color-white;
+    }
+    .project__details{
+      background-color: rgba($color-black, 0.95);
     }
   }
   

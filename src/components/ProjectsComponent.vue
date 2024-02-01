@@ -13,24 +13,37 @@
 
 
     <div class="project__grid">
-      <div v-for="project in visibleProjects" :key="project.title" class="project__card project-card--clickable" @click="showProjectDetails(project)">
-        <h3 class="project__card__title">{{ project.title }}</h3>
+      <div v-for="project in visibleProjects" :key="project.title" class="project__card" @click="showProjectDetails(project)">
+        <h3 class="project__card__title card-title">{{ project.title }}</h3>
         <img :src="project.picture.url" :alt="project.picture.alt" class="project__card__image" />
       </div>
     </div>
 
-    <div v-if="selectedProject" class="project__details project-details--visible">
+    <div v-if="selectedProject" class="project__details">
+      <div class="test">
+
       <picture>
         <img :src="selectedProject.picture.url" :alt="selectedProject.picture.alt" class="project__details__image" />
       </picture>
     
 <div class="project__details__container">
-      <button @click="closeProjectDetails" class="close-button">delete</button>
-      <h3 class="project-details__title">{{ selectedProject.title }}</h3>
-      <p class="project-details__text">{{ selectedProject.text }}</p>
-      <span class="project-details__tag">{{ selectedProject.tag }}</span>
-      <a :href="selectedProject.github" class="project-details__link">GitHub</a>
-      <a :href="selectedProject.url" class="project-details__link">Visiter le projet</a>
+      <button @click="closeProjectDetails" class="close-button">
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      
+      <div class="project__details__tags">
+    <!-- Utilisez v-for pour parcourir les tags -->
+    <span v-for="tag in selectedProject.tag" :key="tag" class="project__details__tag">{{ tag }}</span>
+  </div>
+      <h3 class="project__details__title card-title">{{ selectedProject.title }}</h3>
+      <p class="project__details__text">{{ selectedProject.text }}</p>
+      <div class="project__details__links">
+        <a :href="selectedProject.github" class="project__details__links__link">GITHUB  <span class="dot"></span></a>
+      <a :href="selectedProject.url" class="project__details__links__link">VISIT SITE   <span class="dot"></span></a>
+
+      </div>
+    </div>
     </div>
     </div>
 

@@ -9,21 +9,20 @@ align-items: center;
 
 
 &__logo{
+  @include size(clamp(35px, 7vw, 90px));
 svg{
   
-  @include size(clamp(50px, 7vw, 90px));
+  @include size(clamp(35px, 7vw, 90px));
 }
 }
     &__title{
         font-family: 'Anton', sans-serif;
         font-size: rem(60px);
-        font-size: clamp(25px, 6vw, 60px);
+        font-size: clamp(18px, 6vw, 60px);
         margin: 0;
     }
 &__subtitle{
-  font-family:"Montreal";
-        font-size: rem(30px);
-        font-size: clamp(15px, 1.5vw, 30px);
+        font-size: clamp(11px, 3vw, 30px);
         margin: 0;
     }
     &__outils{
@@ -72,35 +71,39 @@ svg{
       
     }
 
-    &__logo-img{
-        svg{
-            fill: white
-        }
- ;
-    }
-
     &__nightmode {
         display: flex;
-      
+      align-items: center;
         &__container {
           position: relative;
           border: 1px solid;
-          width: 30px;
-          height: 60px;
+          width: 15px;
+          height: 30px;
           border-radius: 20px;
+          @include mq(min, $bkp-tablet) {
+            width: 30px;
+            height: 60px;
+          }
       
           &::before {
             content: "";
             position: absolute;
-            top: 4px; 
-            left: 4px; 
-            width: 20px;
-            height: 20px;
+            top: 1.5px; 
+            left: 1.5px; 
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             // border: 2px solid; 
             background-color: $color-green;
             transition: all .5s $ease-out-quad;
+            @include mq(min, $bkp-tablet) {
+              top: 4px; 
+              left: 4px; 
+              width: 20px;
+              height: 20px;
+            }
           }
+
       
         }
       
@@ -108,17 +111,26 @@ svg{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            font-size: rem(25px);
+            font-size: rem(12px);
             font-weight: 400;
             :nth-child(2){
-                margin-top: -6px;
+                margin-top: -1px;
+                @include mq(min, $bkp-tablet) {
+                  margin-top: -6px;
+                }
+            }
+            @include mq(min, $bkp-tablet) {
+              font-size: rem(25px);
             }
           }
       
         p {
           margin: 0;
-          margin-top: -4px;
+          margin-top: -2px;
           text-align: left;
+          @include mq(min, $bkp-tablet) {
+            margin-top: -4px;
+          }
         }
       }
       

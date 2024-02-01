@@ -14,7 +14,7 @@
                 margin: 0;
                 display: flex;
                 width: fit-content;
-                gap: 10px;
+                gap: 5px;
                 @include mq(min, $bkp-tablet) {
                     margin: 10px;
             }
@@ -23,13 +23,13 @@
                 font-size: clamp(15px, 4vw, 30px);
                 margin-right: 0;
                 margin-left: auto;
-                width: 50%;
+                width:100%;
             }
         
             .filter-select {
                 border: none;
                 border-bottom: 0.5px solid;
-                width: 100%;
+                width: 120%;
                 font-size: clamp(15px, 4vw, 30px);
                 background-color: transparent;
                 
@@ -207,8 +207,7 @@ overflow: hidden;
     border-top: 0.5px solid;
     width: fit-content;
 	display: flex;
-	transform: translate3d(var(--move-initial), 0, 0);
-	animation: marquee 25s linear infinite;
+	animation: marquee 40s linear infinite;
 	animation-play-state: paused;
 	opacity: 0;
 	transition: opacity 0.1s;
@@ -217,6 +216,7 @@ overflow: hidden;
 	transition-duration: 0.4s;
     &__link{
         text-align: center;
+        transform: translate3d(var(--move-initial), 0, 0);
         white-space: nowrap;
         display: flex;
         align-items: center;

@@ -9,20 +9,20 @@ align-items: center;
 
 
 &__logo{
-  @include size(clamp(35px, 7vw, 80px));
+  @include size(clamp(30px, 7vw, 80px));
 svg{
   
-  @include size(clamp(35px, 7vw, 80px));
+  @include size(clamp(30px, 7vw, 80px));
 }
 }
     &__title{
         font-family: 'Anton', sans-serif;
         font-size: rem(60px);
-        font-size: clamp(18px, 6vw, 60px);
+        font-size: clamp(18px, 6vw, 55px);
         margin: 0;
     }
 &__subtitle{
-        font-size: clamp(11px, 3vw, 30px);
+        font-size: clamp(11px, 3vw, 28px);
         margin: 0;
     }
     &__outils{

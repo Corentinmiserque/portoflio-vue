@@ -8,7 +8,7 @@ export const useProjectsStore = defineStore({
     projects: [
       {
         title: 'Courir',
-        text: 'work in progress.',
+        text: 'Project developed during my training at Cepegra. The objective was to create a Progressive Web App with an offline mode, aiming to develop a running application that allows users to start their workouts anew.',
         tag: ['Pwa', 'Vue', 'Bulma', 'Offline' , 'Solo'], 
         picture: { url: "/Courir.png", alt: 'Courir' },
         github: 'https://github.com/Corentinmiserque/courir',
@@ -16,7 +16,7 @@ export const useProjectsStore = defineStore({
       },
       {
         title: 'IMEP',
-        text: 'work in progress.',
+        text: 'Project developed during my internship at La Niche, where I was responsible for a portion of the front-end. This experience allowed me to grasp the concepts of components and templates in Twig.',
         tag: ['Twig', 'Scss', 'Team'], 
         picture: { url: "/IMEP.png", alt: 'IMEP' },
         url: 'https://www.imep.be/',
@@ -24,7 +24,7 @@ export const useProjectsStore = defineStore({
 
       {
         title: 'Pendu',
-        text: 'work in progress.',
+        text: 'Project developed during my training at Cepegra. The objective was to create a hangman game in JavaScript. This allowed for a review of vanilla JavaScript before diving into the React and Vue frameworks.',
         tag: ['Javascript','Solo'], 
         picture: { url: "Pendu.png", alt: 'Pendu' },
         url: 'https://xf383y.csb.app/',
@@ -33,7 +33,7 @@ export const useProjectsStore = defineStore({
 
       {
         title: 'Food Matcher',
-        text: 'work in progress.',
+        text: 'Project developed during my training at Cepegra. The objective was to create a food matcher in JavaScript. This allowed for a review of vanilla JavaScript before diving into the React and Vue frameworks.',
         tag: [ 'Javascript', 'Solo'], 
         picture: { url: "/Fruits-Matcher.png", alt: 'Fruits Matcher' },
         url: 'https://gljqp7.csb.app/',

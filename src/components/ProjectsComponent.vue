@@ -36,26 +36,31 @@
           <p class="project__details__text">{{ selectedProject.text }}</p>
           <div class="project__details__links">
             <a v-if="selectedProject.github" :href="selectedProject.github" class="project__details__links__link">GITHUB <span class="dot"></span></a>
-            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">VISIT SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
             <a v-if="selectedProject.codesandbox" :href="selectedProject.url" class="project__details__links__link">CODESANDBOX <span class="dot"></span></a>
 
             <a v-if="selectedProject.github" :href="selectedProject.github" class="project__details__links__link">GITHUB <span class="dot"></span></a>
-            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">VISIT SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
             <a v-if="selectedProject.codesandbox" :href="selectedProject.url" class="project__details__links__link">CODESANDBOX <span class="dot"></span></a>
 
             <a v-if="selectedProject.github" :href="selectedProject.github" class="project__details__links__link">GITHUB <span class="dot"></span></a>
-            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">VISIT SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
             <a v-if="selectedProject.codesandbox" :href="selectedProject.url" class="project__details__links__link">CODESANDBOX <span class="dot"></span></a>
 
             <a v-if="selectedProject.github" :href="selectedProject.github" class="project__details__links__link">GITHUB <span class="dot"></span></a>
-            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">VISIT SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
             <a v-if="selectedProject.codesandbox" :href="selectedProject.url" class="project__details__links__link">CODESANDBOX <span class="dot"></span></a>
 
             <a v-if="selectedProject.github" :href="selectedProject.github" class="project__details__links__link">GITHUB <span class="dot"></span></a>
-            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">VISIT SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
             <a v-if="selectedProject.codesandbox" :href="selectedProject.url" class="project__details__links__link">CODESANDBOX <span class="dot"></span></a>
 
-
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
+            <a v-if="selectedProject.url" :href="selectedProject.url" class="project__details__links__link">WEB SITE <span class="dot"></span></a>
 
        
           </div>
